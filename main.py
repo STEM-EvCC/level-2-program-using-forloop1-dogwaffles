@@ -6,7 +6,7 @@ mission_success = [True, False, True, True, True, True, False]
 
 #stores the number of missions as a variable, outputs the number
 mission_num = len(mission_names)
-print("There were " + str(mission_num) + " total missions.\n")
+print("\nThere were " + str(mission_num) + " total missions.\n")
 
 #counts the number of successful missions, prints
 mission_suc = mission_success.count(True)

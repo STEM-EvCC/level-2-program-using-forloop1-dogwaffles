@@ -6,15 +6,15 @@ mission_success = [True, False, True, True, True, True, False]
 
 #stores the number of missions as a variable, outputs the number
 mission_num = len(mission_names)
-print("\nThere were " + str(mission_num) + " total missions.\n")
+print("\nThere were \033[0;34m" + str(mission_num) + "\033[0m total missions.")
 
 #counts the number of successful missions, prints
 mission_suc = mission_success.count(True)
-print(str(mission_suc) + " missions were completed successfully.\n")
+print("\033[0;34m" + str(mission_suc) + "\033[0m missions were completed successfully.")
 
 #calculates success percentage of the missions, prints
 miss_suc_rate = ((mission_suc / mission_num) * 100)
-print(f"Mission success rate is {miss_suc_rate:.2f}%.\n\n")
+print(f"Mission success rate was \033[0;34m{miss_suc_rate:.2f}\033[0m%.")
 
 
 #setting up some variables for use in function
@@ -46,8 +46,8 @@ find_years(mission_years, 2000)
 #prints the mission names matching the index numbers in
 #year_list_filtered, prints from mission_names[]
 # I added years to fill it out a bit
-print("The names of missions occurring before the year 2000 are:\n")
+print("The names of missions launched before the year 2000 are:")
 for i in year_list_filtered:
-    print(mission_names[i] + ", " + str(mission_years_filtered[i-1]))
+    print("- " + mission_names[i] + ", " + str(mission_years_filtered[i-1]))
 
 print("\n***END PROGRAM***\n")

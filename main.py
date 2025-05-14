@@ -5,7 +5,7 @@ mission_success = [True, False, True, True, True, True, False]
 
 
 #stores the number of missions as a variable, outputs the number
-mission_num = len(mission_names)
+mission_num = len(mission_names) #I use variables here to make the print() less complicated, easier to debug
 print("\nThere were \033[0;34m" + str(mission_num) + "\033[0m total missions.")
 
 #counts the number of successful missions, prints

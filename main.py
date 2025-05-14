@@ -20,16 +20,16 @@ print(f"Mission success rate was \033[0;34m{miss_suc_rate:.2f}\033[0m%.")
 #setting up some variables for use in creating output arrays
 year_index_list = []
 
-#uses enumerate to separate list into a series of years and indexes
-# if mission year is before 2000, index is output into year_index_list[]
+#uses enumerate to separate mission_years into a series of years and indexes,
+# if mission year is before 2000, index is output into new list: year_index_list[]
 # for use in later outputs
 for i, v in enumerate(mission_years):
     if v < 2000:
         year_index_list.append(i)
 
-#prints the mission names matching the values and enumerated index in 
+#prints the mission names matching the index in 
 # year_index_list, prints from mission_names[] and mission_years[]
-# I added years to fill out the presentation a bit
+# (I added years to fill out the presentation a bit)
 print("The names of missions launched before the year 2000 are:")
 for i in year_index_list:
     print("- " + mission_names[i] + ", " + str(mission_years[i]))

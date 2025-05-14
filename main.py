@@ -16,32 +16,17 @@ print("\033[0;34m" + str(mission_suc) + "\033[0m missions were completed success
 miss_suc_rate = ((mission_suc / mission_num) * 100)
 print(f"Mission success rate was \033[0;34m{miss_suc_rate:.2f}\033[0m%.")
 
-
-#setting up some variables for use in function
+#setting up some variables for use in creating output arrays
 year_list_filtered = []
-name_list_filtered  = []
 mission_years_filtered = []
-year_list_index = 0
 
-#find_years - a function to filter a list based on an element
-# the goal output is to determine the indexes of all mission_year[]
-# that occurred before the year 2000 (enumerate is essential here)
-# I added a bit to output mission_years_filtered[]
-def find_years(list, element):
-    for i, v in enumerate(list):
-        if v < element:
-            year_list_filtered.append(i)
-            mission_years_filtered.append(v)
-    return year_list_filtered 
-    return mission_years_filtered
-
-#initialize function for returns of formed lists
-find_years(mission_years, 2000)
-
-# test outputs
-#print(mission_years)
-#print(year_list_index)
-#print(year_list_filtered)
+#uses enumerate to separate list into a series of years and indexes
+# if mission year is before 2000, index and year are output into separate arrays
+# for use in later outputs
+for i, v in enumerate(mission_years):
+    if v < 2000:
+        year_list_filtered.append(i)
+        mission_years_filtered.append(v)
 
 #prints the mission names matching the index numbers in
 #year_list_filtered, prints from mission_names[]

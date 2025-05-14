@@ -18,7 +18,7 @@ miss_suc_rate = ((mission_suc / mission_num) * 100)
 print(f"Mission success rate was \033[0;34m{miss_suc_rate:.2f}\033[0m%.")
 
 #setting up some variables for use in creating output arrays
-year_list_filtered = []
+year_index_list = []
 mission_years_filtered = []
 
 #uses enumerate to separate list into a series of years and indexes
@@ -26,14 +26,14 @@ mission_years_filtered = []
 # for use in later outputs
 for i, v in enumerate(mission_years):
     if v < 2000:
-        year_list_filtered.append(i)
+        year_index_list.append(i)
         mission_years_filtered.append(v)
 
-#prints the mission names matching the index numbers in
-#year_list_filtered, prints from mission_names[]
+#prints the mission names matching the values and enumerated index in 
+# year_index_list, prints from mission_names[] and mission_years_filtered[]
 # I added years to fill it out a bit
 print("The names of missions launched before the year 2000 are:")
-for i in year_list_filtered:
-    print("- " + mission_names[i] + ", " + str(mission_years_filtered[i-1]))
+for i, v in enumerate(year_index_list):
+    print("- " + mission_names[v] + ", " + str(mission_years_filtered[i]))
 
 print("\n***END PROGRAM***\n")
